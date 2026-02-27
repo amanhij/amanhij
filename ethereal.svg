@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%" style="background: #020203; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;">
+    <defs>
+        <!-- Soft, angelic white glow -->
+        <filter id="glow-ethereal" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3" result="blur1" />
+            <feGaussianBlur stdDeviation="10" result="blur2" />
+            <feGaussianBlur stdDeviation="20" result="blur3" />
+            <feMerge>
+                <feMergeNode in="blur3" />
+                <feMergeNode in="blur2" />
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+
+        <!-- Warm solar flare glow -->
+        <filter id="glow-solar" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="4" result="blur1" />
+            <feGaussianBlur stdDeviation="12" result="blur2" />
+            <feMerge>
+                <feMergeNode in="blur2" />
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+
+        <!-- Solar Singularity Gradient -->
+        <radialGradient id="core-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="15%" stop-color="#FF7B00" />
+            <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+        </radialGradient>
+
+        <!-- Circular Text Path -->
+        <path id="orbit-path" d="M -450, 0 A 450,450 0 1,1 450,0 A 450,450 0 1,1 -450,0" />
+    </defs>
+
+    <style>
+        /* Minimalist Typography */
+        .hud-text { font-size: 10px; fill: #8A94A6; letter-spacing: 4px; font-weight: 400; text-transform: uppercase; }
+        .hud-value { fill: #FFFFFF; font-weight: 600; }
+        .hud-dim { fill: rgba(138, 148, 166, 0.4); letter-spacing: 6px; }
+
+        /* Core 3D Rotation Animations */
+        .spin-forward { animation: rotate-z 45s linear infinite; }
+        .spin-reverse { animation: rotate-z-rev 35s linear infinite; }
+        .spin-slow { animation: rotate-z 120s linear infinite; }
+
+        @keyframes rotate-z { 100% { transform: rotate(360deg); } }
+        @keyframes rotate-z-rev { 100% { transform: rotate(-360deg); } }
+
+        /* Energy Flow (Subtle dashed line offset animation) */
+        .flow-fast { stroke-dasharray: 2 30; animation: dash-crawl 1.5s linear infinite; }
+        .flow-slow { stroke-dasharray: 1 15; animation: dash-crawl-rev 4s linear infinite; }
+
+        @keyframes dash-crawl { to { stroke-dashoffset: -32; } }
+        @keyframes dash-crawl-rev { to { stroke-dashoffset: 16; } }
+
+        /* Organic Core Pulse (Breathing effect) */
+        .core-pulse { animation: breathe 6s ease-in-out infinite; transform-origin: center; }
+        @keyframes breathe {
+            0%, 100% { transform: scale(0.95); opacity: 0.85; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+    </style>
+
+    <!-- ================= ISOMETRIC 3D TOPOLOGY MATRIX ================= -->
+    <g transform="translate(600, 300) scale(1, 0.45)">
+
+        <!-- Extremely subtle, ethereal floor rings -->
+        <g class="spin-slow" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" fill="none">
+            <circle cx="0" cy="0" r="150" />
+            <circle cx="0" cy="0" r="300" stroke-dasharray="4 8" />
+            <circle cx="0" cy="0" r="450" />
+        </g>
+
+        <!-- OUTER TORUS (Ghostly Silver/White) -->
+        <g class="spin-forward" stroke="#C4CDD5" stroke-width="0.5" fill="none" opacity="0.3">
+            <g transform="rotate(0)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(10)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(20)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(30)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(40)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(50)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(60)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(70)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(80)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(90)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(100)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(110)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(120)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(130)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(140)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(150)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(160)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(170)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(180)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(190)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(200)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(210)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(220)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(230)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(240)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(250)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(260)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(270)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(280)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(290)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(300)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(310)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(320)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(330)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(340)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+            <g transform="rotate(350)"><circle cx="280" cy="0" r="100" class="flow-slow" /></g>
+        </g>
+
+        <!-- INNER TORUS (Solar Flare Orange/Gold) -->
+        <g class="spin-reverse" stroke="#FF7B00" stroke-width="1.2" fill="none" filter="url(#glow-solar)" opacity="0.8">
+            <g transform="rotate(0)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(20)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(40)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(60)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(80)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(100)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(120)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(140)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(160)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(180)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(200)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(220)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(240)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(260)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(280)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(300)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(320)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+            <g transform="rotate(340)"><circle cx="150" cy="0" r="50" class="flow-fast" /></g>
+        </g>
+
+        <!-- THE SINGULARITY CORE (Warm, blinding center) -->
+        <circle cx="0" cy="0" r="140" fill="url(#core-glow)" class="core-pulse" />
+
+        <!-- Inner Core Halos -->
+        <g class="spin-forward" stroke="rgba(255,255,255,0.4)" fill="none">
+            <circle cx="0" cy="0" r="40" stroke-width="1" stroke-dasharray="10 40" />
+        </g>
+
+        <!-- Orbital Lines -->
+        <g class="spin-reverse">
+            <!-- Segmented tracks -->
+            <circle cx="0" cy="0" r="450" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="100 40" />
+            <circle cx="0" cy="0" r="435" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none" stroke-dasharray="4 16" />
+
+            <!-- Straight intersecting tick marks -->
+            <g stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+                <line x1="0" y1="-460" x2="0" y2="-435" />
+                <line x1="0" y1="460" x2="0" y2="435" />
+                <line x1="-460" y1="0" x2="-435" y2="0" />
+                <line x1="460" y1="0" x2="435" y2="0" />
+
+                <!-- 45 degree ticks -->
+                <line x1="325" y1="325" x2="307" y2="307" />
+                <line x1="-325" y1="-325" x2="-307" y2="-307" />
+                <line x1="325" y1="-325" x2="307" y2="-307" />
+                <line x1="-325" y1="325" x2="-307" y2="307" />
+            </g>
+        </g>
+    </g>
+
+    <!-- ================= MINIMALIST UI FRAMING ================= -->
+
+    <!-- Delicate Center Focus -->
+    <g stroke="rgba(255,255,255,0.2)" stroke-width="0.5" fill="none">
+        <circle cx="600" cy="300" r="40" stroke-dasharray="1 4" />
+        <circle cx="600" cy="300" r="1.5" fill="#FFFFFF" stroke="none" />
+    </g>
+
+    <!-- Minimalist Name / Handle -->
+    <g transform="translate(600, 530)" text-anchor="middle">
+        <text class="hud-text" style="font-size: 14px; fill: #FFFFFF; letter-spacing: 12px; font-weight: 300; opacity: 0.9;">aman.h</text>
+    </g>
+
+    <!-- Bottom minimal anchor line -->
+    <line x1="600" y1="560" x2="600" y2="580" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+
+</svg>
